@@ -1,7 +1,5 @@
 package com.slawekkami;
 
-//import java.io.BufferedReader;
-//import java.io.IOException;
 import java.io.*;
 import java.util.*;
 
@@ -15,7 +13,7 @@ public class Wej //clasa wejscia danych double z klawiatury
     static BufferedReader bufor = new BufferedReader(wejscie);
     StringTokenizer bon;
 
-    double weDouble()//
+    double weDouble(Boolean bool )//
     {
         try
         {
@@ -23,11 +21,14 @@ public class Wej //clasa wejscia danych double z klawiatury
             return new Double(bon.nextToken()).doubleValue();
         } catch (IOException e)
         {
-            System.err.println("Blad IO	double	" + e);
+           // System.err.println("Blad IO	double	" + e);
             return 0;
         } catch (NumberFormatException e)  //gdy wprowadzone dane nie s¹ liczb¹
         {
-            System.err.println("Wprowadziles -as zly -e znak -i. JESZCZE RAZ");// przyda³o dy siê rozpoznawanie p³ci
+           if(bool==true)
+               System.err.println("Wprowadzilas zle znaki. WPROWADZI JESZCZE RAZ");// przyda³o dy siê rozpoznawanie p³ci
+            else
+               System.err.println("Wprowadziles  zle znaki. WPROWADZI JESZCZE RAZ");
             return 0;
         }
     }
