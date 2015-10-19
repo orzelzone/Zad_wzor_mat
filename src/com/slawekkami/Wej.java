@@ -24,11 +24,18 @@ public class Wej //clasa wejscia danych double z klawiatury
         } catch (IOException e)
         {
             System.err.println("Blad IO	double	" + e);
-            return 0.0;
+            return 0;
         } catch (NumberFormatException e)  //gdy wprowadzone dane nie s¹ liczb¹
         {
-            System.err.println("Wprowadzi³eœ z³e znaki	" + e);
+            System.err.println("Wprowadziles -as zly -e znak -i. JESZCZE RAZ");// przyda³o dy siê rozpoznawanie p³ci
             return 0;
         }
+    }
+    String weString()
+    { try
+    { return bufor.readLine(); }
+    catch (IOException e)
+    { System.err.println("Blad IO String");
+        return ""; }
     }
 }

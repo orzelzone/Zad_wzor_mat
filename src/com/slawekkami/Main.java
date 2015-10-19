@@ -13,12 +13,21 @@ public class Main {
         double b;
         double c;
         double wynik;
-        Wej we =new Wej();//obiekt clasy wejscia danych double
-        String imie; //w nim zapiszemy swoje imie
-        Scanner odczyt = new Scanner(System.in); //obiekt do odebrania danych od u¿ytkownika
+        Boolean plec;
+        Wej we =new Wej();//obiekt clasy wejscia danych
+        String imie; //zmienna w której zapiszemy  imie
         System.out.println("Podaj swoje imiê:");
-        imie = odczyt.nextLine();
+        imie =  we.weString();   //odczyt.nextLine();
         System.out.println("Witaj " + imie); //wyœwietlamy powitanie
+        plec = imie.endsWith("a");
+        if(plec==true)
+        {
+            System.out.println("Jesteœ kobiet¹");
+        }
+        else
+        {
+            System.out.println("Jesteœ mê¿czyzn¹");
+        }
         do {
             System.out.println("Podaj liczbê a");
             a = we.weDouble();
