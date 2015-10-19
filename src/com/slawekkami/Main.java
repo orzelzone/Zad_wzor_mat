@@ -19,14 +19,23 @@ public class Main {
         System.out.println("Podaj swoje imiê:");
         imie = odczyt.nextLine();
         System.out.println("Witaj " + imie); //wyœwietlamy powitanie
-        System.out.println("Podaj liczbê a");
-            a= we.weDouble();
-        System.out.println("Podaj liczbê b");
-            b= we.weDouble();
-        System.out.println("Podaj liczbê c");
-            c= we.weDouble();
+        do {
+            System.out.println("Podaj liczbê a");
+            a = we.weDouble();
+        }
+        while (a==0);
+        do {
+            System.out.println("Podaj liczbê b");
+            b = we.weDouble();
+        }
+        while (b==0);
+        do {
+            System.out.println("Podaj liczbê c");
+            c = we.weDouble();
+        }
+        while (a==0);
         System.out.println( "wprowadi³eœ liczbê "+ a +" ; "+ b + " ; "+c);
-        wynik= a*a+b*b+c*c+2*(a*b+a*c+b*c);
+        wynik = Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2) + 2 * (a * b + a * c + b * c);
         System.out.println("wynik dzia³ania " + wynik);
        // System.out.println(weDouble());
 
