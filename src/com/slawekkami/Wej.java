@@ -3,7 +3,7 @@ package com.slawekkami;
 import java.io.*;
 import java.util.*;
 
-/**
+/*
  * Created by S³awomir on 2015-10-18.
  */
 public class Wej //clasa wejscia danych double z klawiatury
@@ -13,7 +13,7 @@ public class Wej //clasa wejscia danych double z klawiatury
     static BufferedReader bufor = new BufferedReader(wejscie);
     StringTokenizer bon;
 
-    double weDouble(Boolean bool )//
+    double weDouble(Boolean bool)//
     {
         try
         {
@@ -25,10 +25,14 @@ public class Wej //clasa wejscia danych double z klawiatury
             return 0;
         } catch (NumberFormatException e)  //gdy wprowadzone dane nie s¹ liczb¹
         {
-           if(bool==true)
-               System.err.println("Wprowadzilas zle znaki. WPROWADZI JESZCZE RAZ");// przyda³o dy siê rozpoznawanie p³ci
-            else
+           if(bool) //je¿eli prawda to
+           {
+               System.err.println("Wprowadzilas zle znaki. WPROWADZI JESZCZE RAZ");
+           }
+            else // je¿eli nie prawda to
+           {
                System.err.println("Wprowadziles  zle znaki. WPROWADZI JESZCZE RAZ");
+           }
             return 0;
         }
     }

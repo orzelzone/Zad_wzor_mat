@@ -1,6 +1,6 @@
 package com.slawekkami;
 
- import java.util.Scanner;
+
 
 
 public class Main {
@@ -44,7 +44,7 @@ public class Main {
         }
         while (c==0);
 
-        if(plec==true)
+        if(plec)
         {
             System.out.println("Wprowadzilas liczby  a=" + a + " ; b=" + b + " ; c= " + c);
         }
@@ -54,7 +54,7 @@ public class Main {
         }
 
         wynik = Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2) + 2 * (a * b + a * c + b * c);
-        System.out.println("wynik dzialania postaci (a+b+c)^2 = a^2+B^2+c^2+2(ab+ac+bc)= " + wynik);
+        System.out.println("Wynik dzialania postaci (a+b+c)^2 = a^2+B^2+c^2+2(ab+ac+bc)= " + wynik);
        // System.out.println(weDouble());
 
 
