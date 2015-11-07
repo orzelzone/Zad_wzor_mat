@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        //Aplikacja  rozwi¹zuj¹ca  dzia³anie matematyczne kewadrat sumy trzech sk³adników
+        //Aplikacja  rozwiÄ…zujÄ…ca  dziaÅ‚anie matematyczne kewadrat sumy trzech skÅ‚adnikÃ³w
         //(a+b+c)^2 = a^2+B^2+c^2+2(ab+ac+bc)
         double a;
         double b;
@@ -15,31 +15,31 @@ public class Main {
         double wynik;
         Boolean plec;
         Wej we =new Wej();//obiekt clasy wejscia danych
-        String imie; //zmienna w której zapiszemy  imie
-        System.out.println("Podaj swoje imiê:");
+        String imie; //zmienna w ktÃ³rej zapiszemy  imie
+        System.out.println("Podaj swoje imie:");
         imie =  we.weString();   //odczyt.nextLine();
-        System.out.println("Witaj " + imie); //wyœwietlamy powitanie
-        plec = imie.endsWith("a"); // okreœlenie p³ci u¿ytkownika programu
+        System.out.println("Witaj " + imie); //wyÅ›wietlamy powitanie
+        plec = imie.endsWith("a"); // okreÅ›lenie pÅ‚ci uÅ¼ytkownika programu
        /* if(plec==true)
         {
-            System.out.println("Jesteœ kobiet¹");
+            System.out.println("JesteÅ› kobietÄ…");
         }
         else
         {
-            System.out.println("Jesteœ mê¿czyzn¹");
+            System.out.println("JesteÅ› mÄ™Å¼czyznÄ…");
         }*/
         do {
-            System.out.println("Podaj liczbê a");
+            System.out.println("Podaj liczbe a");
             a = we.weDouble(plec);
         }
         while (a==0);
         do {
-            System.out.println("Podaj liczbê b");
+            System.out.println("Podaj liczbe b");
             b = we.weDouble(plec);
         }
         while (b==0);
         do {
-            System.out.println("Podaj liczbê c");
+            System.out.println("Podaj liczbe c");
             c = we.weDouble(plec);
         }
         while (c==0);
@@ -53,7 +53,7 @@ public class Main {
             System.out.println("Wprowadziles liczby  a=" + a + " ; b=" + b + " ; c= " + c);
         }
 
-        wynik = Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2) + 2 * (a * b + a * c + b * c);
+        wynik = Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2) + 2 * (a * b + a * c + b * c);// wykonanie dziaÅ‚Ä…nia
         System.out.println("Wynik dzialania postaci (a+b+c)^2 = a^2+B^2+c^2+2(ab+ac+bc)= " + wynik);
        // System.out.println(weDouble());
 
